@@ -1,0 +1,190 @@
+CallsManager: 
+  mCalls: 
+  mCallAudioManager:
+    All calls:
+    Active dialing, or connecting calls:
+    Ringing calls:
+    Holding calls:
+    Foreground call:
+    null
+    CallAudioModeStateMachine:
+      History:
+      2026-06-16T17:32:42.834201 - Enter UNFOCUSED
+      2026-06-16T17:34:09.488614 - Enter RINGING
+      2026-06-16T17:34:23.008420 - Enter UNFOCUSED
+      2026-06-16T17:34:23.027479 - Mode MODE_NORMAL
+      Pending Msg:
+      Looper (CallAudioModeStateMachine, tid 240) {2281a7c}
+        (Total messages: 0, polling=true, quitting=false)
+    mCallAudioRouteAdapter:
+      Current state: QuiescentEarpieceRoute
+      Pending messages:
+        Looper (com.android.server.telecom.CallAudioRouteStateMachine, tid 238) {b0d3f05}
+          (Total messages: 0, polling=true, quitting=false)
+    BluetoothDeviceManager:
+  mTtyManager:
+    mCurrentTtyMode: 0
+  mInCallController:
+    combinedInCallServiceMap (InCalls registered):
+    ServiceConnections (InCalls bound):
+    CarModeTracker:
+      Current car mode apps:
+      Car mode history:
+  mCallDiagnosticServiceController:
+    activeCallDiagnosticService: 
+    isConnected: false
+  mCallAnomalyWatchdog:
+    Anomaly log:
+    Pending timeouts: 
+    Pending destruction: 
+  mEmergencyCallDiagnosticLogger:
+      PERSISTED DIAGNOSTIC DATA FROM DROP BOX
+      Exception was thrown while dumping diagnostic data from DropBox
+    mDefaultDialerCache:
+      User 0: com.google.android.dialer
+    mConnectionServiceRepository:
+      mServiceCache:
+    mRoleManager:
+      DefaultCallRedirectionApp: 
+      DefaultCallScreeningApp: 
+      DefaultCallCompanionApps: (override ) 
+    mConnectionSvrFocusMgr:
+      Call Focus History:
+  PhoneAccountRegistrar: 
+    xmlVersion: 9
+    defaultOutgoing: none
+    outgoingPhoneAccountForTelScheme: none
+    defaultVoiceSubId: 1
+    simCallManager: null
+    phoneAccounts:
+      [[X] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} Capabilities: SuppVideo Video CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true, android.telecom.extra.SORT_ORDER=0}] GroupId: *** SC Restrictions: [NONE]]
+      [[X] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 3, UserHandle{0} Capabilities: SuppVideo Video CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true, android.telecom.extra.SORT_ORDER=1}] GroupId: *** SC Restrictions: [NONE]]
+      [[X] PhoneAccount: ComponentInfo{com.google.android.gm/com.google.android.gm}, ***, UserHandle{0} Capabilities: SelfManaged SuppVideo Video TransactOps  Audio Routes: BESW Schemes: tel  Extras: Bundle[{isCoreTelecomAccount=true}] GroupId: *** SC Restrictions: [NONE]]
+      [[X] PhoneAccount: ComponentInfo{com.google.android.apps.tachyon/com.google.android.apps.tachyon}, ***, UserHandle{0} Capabilities: SelfManaged SuppVideo Video TransactOps  Audio Routes: BESW Schemes: tel  Extras: Bundle[{isCoreTelecomAccount=true}] GroupId: *** SC Restrictions: [NONE]]
+      [[X] PhoneAccount: ComponentInfo{org.thoughtcrime.securesms/org.thoughtcrime.securesms.service.webrtc.AndroidCallConnectionService}, ***, UserHandle{0} Capabilities: SelfManaged Video  Audio Routes: BESW Schemes: tel  Extras: null GroupId: *** SC Restrictions: [NONE]]
+      [[X] PhoneAccount: ComponentInfo{org.thoughtcrime.securesms/org.thoughtcrime.securesms}, ***, UserHandle{0} Capabilities: SelfManaged SuppVideo Video TransactOps  Audio Routes: BESW Schemes: tel  Extras: Bundle[{isCoreTelecomAccount=true}] GroupId: *** SC Restrictions: [NONE]]
+      [[X] PhoneAccount: ComponentInfo{com.Slack/slack.services.huddles.service.impl.HuddleTelecomServiceImpl}, ***, UserHandle{0} Capabilities: SelfManaged Video  Audio Routes: BESW Schemes: tel  Extras: null GroupId: *** SC Restrictions: [NONE]]
+      [[X] PhoneAccount: ComponentInfo{com.microsoft.teams/com.microsoft.skype.teams.calling.telecom.TelecomConnectionService}, ***, UserHandle{0} Capabilities: SelfManaged  Audio Routes: BESW Schemes: tel  Extras: null GroupId: *** SC Restrictions: [NONE]]
+      [[X] PhoneAccount: ComponentInfo{com.whatsapp/com.whatsapp.calling.telecom.SelfManagedConnectionService}, ***, UserHandle{0} Capabilities: SelfManaged SuppVideo Video  Audio Routes: BESW Schemes: tel  Extras: Bundle[{android.telecom.extra.LOG_SELF_MANAGED_CALLS=false}] GroupId: *** SC Restrictions: [NONE]]
+      [[X] PhoneAccount: ComponentInfo{com.whatsapp/com.whatsapp.calling.telecom.SelfManagedConnectionService}, ***, UserHandle{0} Capabilities: SelfManaged SuppVideo Video  Audio Routes: BESW Schemes: tel  Extras: Bundle[{android.telecom.extra.LOG_SELF_MANAGED_CALLS=false}] GroupId: *** SC Restrictions: [NONE]]
+      [[X] PhoneAccount: ComponentInfo{com.whatsapp.w4b/com.whatsapp.calling.telecom.SelfManagedConnectionService}, ***, UserHandle{0} Capabilities: SelfManaged SuppVideo Video  Audio Routes: BESW Schemes: tel  Extras: Bundle[{android.telecom.extra.LOG_SELF_MANAGED_CALLS=false}] GroupId: *** SC Restrictions: [NONE]]
+      [[X] PhoneAccount: ComponentInfo{com.hirist.jobseeker/com.hiennv.flutter_callkit_incoming.CallkitConnectionService}, ***, UserHandle{0} Capabilities: SelfManaged  Audio Routes: BESW Schemes: tel  Extras: null GroupId: *** SC Restrictions: [NONE]]
+      test emergency PhoneAccount filter: null
+  Analytics:
+    Call TC@1: {
+        startTime: 0
+        endTime: 1781611462889
+        direction: INCOMING
+        isAdditionalCall: false
+        isInterrupted: false
+        isEmergency: false
+        callTechnologies: [IMS ]
+        callTerminationReason: DisconnectCause [ Code: (MISSED) Label: () Description: () Reason: (INCOMING_MISSED) Tone: (27)  TelephonyCause: 1/-1 ImsReasonInfo: ImsReasonInfo :: {510 : CODE_USER_TERMINATED_BY_REMOTE, 0, }]
+        missedReason: [low_volume no_vibrate ]
+        connectionService: com.android.phone/com.android.services.telephony.TelephonyConnectionService
+        isVideoCall: false
+        inCallServices: [
+        name: com.google.android.dialer/com.android.incallui.InCallServiceImpl type: 2 is crashed: false service last time in ms: 15713
+        name: com.google.android.gms/.bankscamwarning.services.BankScamCallDetectionService type: 4 is crashed: false service last time in ms: 15688
+        name: com.motorola.bach.modemstats/.call.MPhoneInCallService type: 4 is crashed: false service last time in ms: 15638
+        name: com.motorola.sarcontrol/.SarInCallService type: 4 is crashed: false service last time in ms: 15632
+    ]
+        callProperties: []
+        callSource: UNSPECIFIED
+    }
+    
+    CSW.sDc: 194.00
+    CSW.rC: 2034.00
+    Hardware Version: PVT1
+    Past analytics dumps: 
+  Flag Configurations: 
+    	[✅]: addCallUriForMissedCalls                            add_call_uri_for_missed_calls
+    	[✅]: associatedUserRefactorForWorkProfile                associated_user_refactor_for_work_profile
+    	[✅]: availableRoutesNeverUpdatedAfterSetSystemAudioState available_routes_never_updated_after_set_system_audio_state
+    	[✅]: businessCallComposer                                business_call_composer
+    	[❌]: cacheCallAudioCallbacks                             cache_call_audio_callbacks
+    	[✅]: callAudioCommunicationDeviceRefactor                call_audio_communication_device_refactor
+    	[✅]: callDetailsIdChanges                                call_details_id_changes
+    	[✅]: cancelRemovalOnEmergencyRedial                      cancel_removal_on_emergency_redial
+    	[✅]: clearCommunicationDeviceAfterAudioOpsComplete       clear_communication_device_after_audio_ops_complete
+    	[✅]: communicationDeviceProtectedByLock                  communication_device_protected_by_lock
+    	[✅]: earlyBindingToIncallService                         early_binding_to_incall_service
+    	[❌]: earlyUpdateInternalCallAudioState                   early_update_internal_call_audio_state
+    	[✅]: eccKeyguard                                         ecc_keyguard
+    	[❌]: enableCallSequencing                                enable_call_sequencing
+    	[✅]: ensureAudioModeUpdatesOnForegroundCallChange        ensure_audio_mode_updates_on_foreground_call_change
+    	[✅]: fixAudioFlickerForOutgoingCalls                     fix_audio_flicker_for_outgoing_calls
+    	[❌]: genAnomReportOnFocusTimeout                         gen_anom_report_on_focus_timeout
+    	[❌]: getLastKnownCellIdentity                            get_last_known_cell_identity
+    	[✅]: getRegisteredPhoneAccounts                          get_registered_phone_accounts
+    	[✅]: ignoreAutoRouteToWatchDevice                        ignore_auto_route_to_watch_device
+    	[✅]: isNewOutgoingCallBroadcastUnblocking                is_new_outgoing_call_broadcast_unblocking
+    	[✅]: onlyUpdateTelephonyOnValidSubIds                    only_update_telephony_on_valid_sub_ids
+    	[❌]: postponeRegisterToLeaudio                           postpone_register_to_leaudio
+    	[✅]: profileUserSupport                                  profile_user_support
+    	[❌]: resetMuteWhenEnteringQuiescentBtRoute               reset_mute_when_entering_quiescent_bt_route
+    	[❌]: resolveSwitchingBtDevicesComputation                resolve_switching_bt_devices_computation
+    	[❌]: separatelyBindToBtIncallService                     separately_bind_to_bt_incall_service
+    	[✅]: setAudioModeBeforeAbandonFocus                      set_audio_mode_before_abandon_focus
+    	[✅]: setMuteState                                        set_mute_state
+    	[❌]: setRemoteConnectionCallId                           set_remote_connection_call_id
+    	[✅]: skipFilterPhoneAccountPerformDndFilter              skip_filter_phone_account_perform_dnd_filter
+    	[✅]: telecomLogExternalWearableCalls                     telecom_log_external_wearable_calls
+    	[❌]: telecomMainlineBlockedNumbersManager                telecom_mainline_blocked_numbers_manager
+    	[❌]: telecomResolveHiddenDependencies                    telecom_resolve_hidden_dependencies
+    	[✅]: telecomSkipLogBasedOnExtra                          telecom_skip_log_based_on_extra
+    	[❌]: telephonyHasDefaultButTelecomDoesNot                telephony_has_default_but_telecom_does_not
+    	[❌]: transactionalCsVerifier                             transactional_cs_verifier
+    	[❌]: transactionalHoldDisconnectsUnholdable              transactional_hold_disconnects_unholdable
+    	[✅]: transactionalVideoState                             transactional_video_state
+    	[❌]: transitRouteBeforeAudioDisconnectBt                 transit_route_before_audio_disconnect_bt
+    	[❌]: unregisterUnresolvableAccounts                      unregister_unresolvable_accounts
+    	[❌]: updateRouteMaskWhenBtConnected                      update_route_mask_when_bt_connected
+    	[❌]: updatedRcsCallCountTracking                         updated_rcs_call_count_tracking
+    	[✅]: useActualAddressToEnterConnectingState              use_actual_address_to_enter_connecting_state
+    	[✅]: useDeviceProvidedSerializedRingerVibration          use_device_provided_serialized_ringer_vibration
+    	[✅]: useImprovedListenerOrder                            use_improved_listener_order
+    	[❌]: useRefactoredAudioRouteSwitching                    use_refactored_audio_route_switching
+    	[✅]: voipAppActionsSupport                               voip_app_actions_support
+  TransactionManager: 
+    <<Flag not enabled>>
+  Historical Events:
+    CallTC@1 [16 Jun 2026 5:34:08 pm](MT - incoming)(User=UserHandle{0})
+    	>>>Target PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} (Jio)
+    	>>>Conn mgr: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0}
+    	To address: tel:************* Verstat: not Presentation: Allowed
+      17:34:08.871 - CREATED (null;null):TSI.aNIC(cap)@Aes
+      17:34:08.881 - BIND_CS (ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}):TSI.aNIC(cap)@Aes
+      17:34:09.080 - CS_BOUND (ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}):SBC.oSC(cap)@AfI
+      17:34:09.082 - START_CONNECTION (tel:************* via:com.android.phone):SBC.oSC(cap)@AfI
+      17:34:09.211 - CAPABILITY_CHANGE (Current: [[ sup_hld mut VTlrx VTltx VTlbi spd_aud]], Removed [[]], Added [[ sup_hld mut VTlrx VTltx VTlbi spd_aud]]):(...->CS.crCo->H.CS.crCo->H.CS.crCo.pICR)->CSW.hCCC(cap/cast)@E-E-AfI
+      17:34:09.230 - FILTERING_INITIATED
+      17:34:09.232 - ENTERPRISE_FILTER_INITIATED
+      17:34:09.232 - ENTERPRISE_FILTER_FINISHED ([Allow, logged, notified])
+      17:34:09.232 - DND_PRE_CHECK_INITIATED
+      17:34:09.241 - DND_PRE_CHECK_COMPLETED (false)
+      17:34:09.241 - BLOCK_CHECK_INITIATED
+      17:34:09.249 - BLOCKED_PREFIX_INITIATED
+      17:34:09.263 - BLOCKED_PREFIX_FINISHED ([Allow, logged, notified])
+      17:34:09.265 - INCOMING_RESTRICTED_INITIATED
+      17:34:09.267 - INCOMING_RESTRICTED_FINISHED ([Allow, logged, notified])
+      17:34:09.268 - DIRECT_TO_VM_INITIATED
+      17:34:09.304 - DIRECT_TO_VM_FINISHED ([Allow, logged, notified, contact exists])
+      17:34:09.314 - BLOCK_CHECK_FINISHED (not blocked [Allow, logged, notified, contact exists])
+      17:34:09.345 - SET_RINGING (successful incoming call)
+      17:34:09.576 - FILTERING_COMPLETED ([Allow, logged, notified, contact exists])
+      17:34:09.620 - FLASH_NOTIFICATION_START
+      17:34:09.623 - SKIP_RINGING (Inaudible: isVolumeOverZero=false, shouldRingForContact=true isVibratorEnabled=false)
+      17:34:22.763 - CAPABILITY_CHANGE (Current: [[ sup_hld mut spd_aud]], Removed [[ VTlrx VTltx VTlbi]], Added [[]]):CSW.sCC(cap)@Ai4
+      17:34:22.889 - SET_DISCONNECTED (disconnected set explicitly> DisconnectCause [ Code: (MISSED) Label: () Description: () Reason: (INCOMING_MISSED) Tone: (27)  TelephonyCause: 1/-1 ImsReasonInfo: ImsReasonInfo :: {510 : CODE_USER_TERMINATED_BY_REMOTE, 0, }]):CSW.sDc(cap)@AjM
+      17:34:22.934 - LOG_CALL (number=*************,postDial=,pres=1):CSW.sDc(cap)@AjM
+      17:34:23.000 - CONF_CALLS_CHANGED ():CSW.sCC(cap)@Ajk
+      17:34:23.052 - CONF_CALLS_CHANGED ():CSW.sCC(cap)@Ajo
+      17:34:23.068 - CAPABILITY_CHANGE (Current: [[ sup_hld mut]], Removed [[ spd_aud]], Added [[]]):CSW.sCC(cap)@Ajw
+      17:34:23.073 - DESTROYED:CSW.rC->CM.pR(cap)@Aj0
+      Timings (average for this call, milliseconds):
+        bind_cs: 199.00
+        block_check_finished: 73.00
+        direct_to_vm_finished: 36.00
+        dnd_pre_check_completed: 9.00
+        filtering_completed: 346.00
