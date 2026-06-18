@@ -14,7 +14,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -28,13 +27,11 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.spamblocker.ui.BlockedHistoryScreen
 import com.example.spamblocker.ui.PatternScreen
-import com.example.spamblocker.ui.SettingsScreen
 import com.example.spamblocker.ui.theme.SpamBlockerTheme
 
 sealed class Screen(val route: String, val label: String) {
     object Patterns : Screen("patterns", "Patterns")
     object History : Screen("history", "Blocked Calls")
-    object Settings : Screen("settings", "Settings")
 }
 
 class MainActivity : ComponentActivity() {
@@ -86,7 +83,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun SpamBlockerApp() {
     val navController = rememberNavController()
-    val items = listOf(Screen.Patterns, Screen.History, Screen.Settings)
+    val items = listOf(Screen.Patterns, Screen.History)
 
     Scaffold(
         modifier = Modifier.fillMaxSize(),
@@ -111,7 +108,6 @@ fun SpamBlockerApp() {
                                 imageVector = when (screen) {
                                     Screen.Patterns -> Icons.Default.Home
                                     Screen.History -> Icons.Default.Warning
-                                    Screen.Settings -> Icons.Default.Settings
                                 },
                                 contentDescription = screen.label
                             )
@@ -129,7 +125,6 @@ fun SpamBlockerApp() {
         ) {
             composable(Screen.Patterns.route) { PatternScreen() }
             composable(Screen.History.route) { BlockedHistoryScreen() }
-            composable(Screen.Settings.route) { SettingsScreen() }
         }
     }
 }

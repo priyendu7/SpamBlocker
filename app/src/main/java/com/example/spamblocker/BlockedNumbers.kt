@@ -1,10 +1,7 @@
 package com.example.spamblocker
 
 object BlockedNumbers {
-    val numbers = listOf(
-        "9450843436",
-        "1234567890"
-    )
+    val numbers = emptyList<String>()
 
     fun shouldBlock(number: String?): Boolean {
         if (number == null) return false
