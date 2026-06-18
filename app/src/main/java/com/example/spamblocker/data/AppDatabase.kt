@@ -14,16 +14,11 @@ class Converters {
     @TypeConverter
     fun toMatchType(value: String): MatchType = MatchType.valueOf(value)
 
-    @TypeConverter
-    fun fromSimTarget(value: SimTarget): String = value.name
-
-    @TypeConverter
-    fun toSimTarget(value: String): SimTarget = SimTarget.valueOf(value)
 }
 
 @Database(
-    entities = [BlockPattern::class, BlockedCallLog::class, BlockSettings::class],
-    version = 2,
+    entities = [BlockPattern::class, BlockedCallLog::class],
+    version = 3,
     exportSchema = false
 )
 @TypeConverters(Converters::class)
@@ -31,7 +26,6 @@ abstract class AppDatabase : RoomDatabase() {
 
     abstract fun blockPatternDao(): BlockPatternDao
     abstract fun blockedCallLogDao(): BlockedCallLogDao
-    abstract fun blockSettingsDao(): BlockSettingsDao
 
     companion object {
         @Volatile

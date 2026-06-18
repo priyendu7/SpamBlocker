@@ -6,7 +6,6 @@ import androidx.lifecycle.viewModelScope
 import com.example.spamblocker.data.BlockPattern
 import com.example.spamblocker.data.BlockRepository
 import com.example.spamblocker.data.MatchType
-import com.example.spamblocker.data.SimTarget
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
@@ -18,9 +17,9 @@ class PatternViewModel(application: Application) : AndroidViewModel(application)
     val patterns = repository.getAllPatterns()
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
 
-    fun addPattern(pattern: String, matchType: MatchType, simTarget: SimTarget) {
+    fun addPattern(pattern: String, matchType: MatchType) {
         viewModelScope.launch {
-            repository.addPattern(pattern, matchType, simTarget)
+            repository.addPattern(pattern, matchType)
         }
     }
 

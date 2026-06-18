@@ -10,7 +10,6 @@ data class BlockedCallLog(
     val number: String,
     val matchedPattern: String,
     val matchType: MatchType,
-    val simSlot: Int, // 0 = SIM1, 1 = SIM2, -1 = unknown
     val isUnknownNumberBlock: Boolean = false,
     val blockedAt: Long = System.currentTimeMillis()
 )

@@ -15,9 +15,6 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.spamblocker.data.BlockPattern
 import com.example.spamblocker.data.MatchType
-import com.example.spamblocker.data.SimTarget
-import java.text.SimpleDateFormat
-import java.util.*
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -63,11 +60,11 @@ fun PatternScreen(viewModel: PatternViewModel = viewModel()) {
         PatternDialog(
             existing = editingPattern,
             onDismiss = { showDialog = false },
-            onSave = { patternText, matchType, simTarget ->
+            onSave = { patternText, matchType ->
                 if (editingPattern != null) {
-                    viewModel.updatePattern(editingPattern!!.copy(pattern = patternText, matchType = matchType, simTarget = simTarget))
+                    viewModel.updatePattern(editingPattern!!.copy(pattern = patternText, matchType = matchType))
                 } else {
-                    viewModel.addPattern(patternText, matchType, simTarget)
+                    viewModel.addPattern(patternText, matchType)
                 }
                 showDialog = false
             }
@@ -90,14 +87,14 @@ fun PatternRow(
             Column(modifier = Modifier.weight(1f)) {
                 Text(pattern.pattern, style = MaterialTheme.typography.titleMedium)
                 Text(
-                    "${matchTypeLabel(pattern.matchType)} • ${simTargetLabel(pattern.simTarget)}",
+                    matchTypeLabel(pattern.matchType),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
             Switch(checked = pattern.enabled, onCheckedChange = { onToggle() })
             IconButton(onClick = onEdit) {
-                Icon(Icons.Default.Add, contentDescription = "Edit")
+                Icon(Icons.Default.Edit, contentDescription = "Edit")
             }
             IconButton(onClick = onDelete) {
                 Icon(Icons.Default.Delete, contentDescription = "Delete")
@@ -110,11 +107,10 @@ fun PatternRow(
 fun PatternDialog(
     existing: BlockPattern?,
     onDismiss: () -> Unit,
-    onSave: (String, MatchType, SimTarget) -> Unit
+    onSave: (String, MatchType) -> Unit
 ) {
     var text by remember { mutableStateOf(existing?.pattern ?: "") }
     var matchType by remember { mutableStateOf(existing?.matchType ?: MatchType.STARTS_WITH) }
-    var simTarget by remember { mutableStateOf(existing?.simTarget ?: SimTarget.BOTH) }
 
     AlertDialog(
         onDismissRequest = onDismiss,
@@ -137,29 +133,16 @@ fun PatternDialog(
                     }
                 }
                 Spacer(modifier = Modifier.height(12.dp))
-                Text("Apply to", style = MaterialTheme.typography.labelMedium)
-                SimTarget.entries.forEach { target ->
-                    Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.fillMaxWidth()) {
-                        RadioButton(selected = simTarget == target, onClick = { simTarget = target })
-                        Text(simTargetLabel(target))
-                    }
-                }
             }
         },
         confirmButton = {
             TextButton(
-                onClick = { if (text.isNotBlank()) onSave(text.trim(), matchType, simTarget) },
+                onClick = { if (text.isNotBlank()) onSave(text.trim(), matchType) },
                 enabled = text.isNotBlank()
             ) { Text("Save") }
         },
         dismissButton = { TextButton(onClick = onDismiss) { Text("Cancel") } }
     )
-}
-
-fun simTargetLabel(target: SimTarget): String = when (target) {
-    SimTarget.SIM_1 -> "SIM 1 only"
-    SimTarget.SIM_2 -> "SIM 2 only"
-    SimTarget.BOTH -> "Both SIMs"
 }
 
 fun matchTypeLabel(matchType: MatchType): String = when (matchType) {
